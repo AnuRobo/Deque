@@ -45,9 +45,15 @@ class Deeque{
 			rear = 0;
 		}else if(front == 0) {  // front is at first position of queue
 			front = size - 1;
-		}else { // insert current element into Deque
-			arr[front] = key;
+		}else { // decrement front end by '1'
+			// as we are entering front from end like currently we are on 4th position
+			// now to enter a new front we have to enter at position 3 then we have to have to perform decrement
+			front = front - 1;
 		}
+
+		// insert current element into Deque
+		arr[front] = key;
+		
 	}
 	
 	// function to insert element at rear end of Deque
